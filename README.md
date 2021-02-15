@@ -16,8 +16,8 @@ Probada sobre el servidor de aplicaciones WildFly 18 e Implementada en el IDE Ec
 
 Desarrollada bajo el framework ANGULAR
 
-- hulkstore-administracion-web: Correspondiente a la capa de persistencia
-- hulkstore-servicio: Correspondiente a la capa de negocio
+- hulkstore-administracion-web: Correspondiente a la administración del inventario.
+- hulkstore-tienda-web: Correspondiente a la aplicación de la tienda destinada al público en general. 
 
 
 # 1. Carga de tablas de Base de Datos sobre Postgresql
