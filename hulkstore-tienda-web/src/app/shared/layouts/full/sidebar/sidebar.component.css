@@ -1,0 +1,81 @@
+.menu-tree-invisible {
+    display: none;
+}
+
+.menu-tree ul,
+.menu-tree li {
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style-type: none;
+}
+
+.mat-tree {
+    background: transparent;
+    color: white;
+    padding: 5px;
+}
+
+.mat-tree-node,
+.mat-nested-tree-node {
+    color: white;
+    font-size: 13px;
+}
+
+.mat-tree-node {
+    min-height: 45px !important;
+}
+
+.menu-tree .material-icons {
+    font-size: 18px;
+    color: white;
+}
+
+.menu-tree .mat-icon-button {
+    width: 24px;
+}
+
+.subMenu .mat-icon-button {
+    width: 35px;
+}
+
+.menu-tree .mat-icon-button .mat-icon,
+.menu-tree .mat-icon-button i {
+    line-height: 23px;
+}
+
+.menu-tree label {
+    margin-bottom: 0px;
+}
+
+.active {
+    /*background: #26c6da;*/
+    background: #6797a3;
+    border-radius: 4px;
+}
+
+.active span {
+    color: #fff;
+}
+
+.cabecera {
+    /*box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.5);*/
+    border-top: #888;
+}
+
+.cabecera:hover {
+    cursor: pointer;
+}
+
+.cabecera:hover {
+    background: rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+}
+
+.active:hover {
+    background: #6797a3;
+    border-radius: 4px;
+}
+
+.subMenu {
+    padding-left: 14px;
+}

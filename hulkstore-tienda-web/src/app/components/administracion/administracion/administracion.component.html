@@ -1,0 +1,54 @@
+<div fxLayout="row">
+    <div fxFlex.gt-sm="100" fxFlex="100">
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title>HULK STORE - Tienda Online</mat-card-title>
+                <mat-card-subtitle>Productos de DC-COMICS y MARVEL</mat-card-subtitle>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>
+
+
+<div fxLayout="row" style="margin: 15px;">
+    <div fxFlex.gt-sm="100" fxFlex="100">
+
+        <div class="card-columns">
+            <div class="card" *ngFor="let item of dataSource">
+
+                <mat-card>
+                    <mat-card-content>
+
+                        <mat-card-title>Lista: {{item.nombre}}</mat-card-title>
+                        <mat-card-title>{{item.descripcion}}</mat-card-title>
+                        <div class="button-row">
+                            <button mat-raised-button color="primary">Comprar</button>
+
+                        </div>
+                        <mat-grid-list cols="2" rowHeight="370px">
+                            <mat-grid-tile [colspan]="1" [rowspan]="1">
+
+                                <div class="card" style="width: 18rem;">
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{item.valor}}</h5>
+
+                                        <p class="card-text">
+                                            Existencia
+
+                                        </p>
+
+                                    </div>
+                                </div>
+                            </mat-grid-tile>
+
+
+                        </mat-grid-list>
+
+                    </mat-card-content>
+                </mat-card>
+
+            </div>
+
+        </div>
+    </div>
+</div>

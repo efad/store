@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<jboss-web>
+
+	<!-- URL to access the web module -->
+	<context-root>hulkstore</context-root>
+	<!--<security-domain>dominioSeguridad</security-domain>-->
+
+</jboss-web>

@@ -1,0 +1,41 @@
+<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+    <p-toast></p-toast>
+    <mat-card class="box">
+        <div class="imagen-logo-login">
+            <img mat-card-image src="assets/images/hulk-store-logo.png">
+        </div>
+        <mat-card-header>
+            <mat-card-title fxLayoutAlign="center" class="titulo-login">Hulk Store - Tienda Online</mat-card-title>
+        </mat-card-header>
+        <form class="example-form" (ngSubmit)="login(formularioLoginForm)" #formularioLoginForm="ngForm">
+            <mat-card-content>
+                <mat-form-field class="example-full-width">
+                    <span *ngIf="formularioLoginForm.submitted && formularioLoginForm.controls['usuario'].errors" class="text-danger animated fadeIn mensaje-emergente-campo">
+                      Obligatorio
+                    </span>
+                    <input matInput class="input100" type="usuario" name="usuario" required [(ngModel)]="usuario" placeholder="Usuario" />
+                </mat-form-field>
+                <mat-form-field class="example-full-width" data-validate="Password is required">
+                    <span *ngIf="formularioLoginForm.submitted && formularioLoginForm.controls['password'].errors" class="text-danger animated fadeIn mensaje-emergente-campo">
+                      Obligatorio
+                    </span>
+                    <input matInput class="input100" type="password" name="password" required maxlength="6" [(ngModel)]="password" placeholder="Contraseña" />
+                </mat-form-field>
+
+                <div>
+                    <input id="ckb1" type="checkbox" name="remember-me" [(ngModel)]="recordarUsuario" />
+                    <label style="margin-left: 10px; font-size: 14px;" for="ckb1">
+                        Recordar mi usuario
+                      </label>
+                </div>
+
+            </mat-card-content>
+
+            <button mat-stroked-button color="accent" class="btn-block boton-login" type="submit">Ingresar</button>
+        </form>
+    </mat-card>
+</div>
+
+<label class="text-footer">
+  Copyright © 2021 Todos los derechos reservados&nbsp;|&nbsp;Desarrollado por HULK TEAM
+</label>

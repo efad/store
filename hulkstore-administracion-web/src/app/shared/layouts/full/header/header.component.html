@@ -1,0 +1,23 @@
+<!-- ============================================================== -->
+<!-- Profile - style you can find in header.scss -->
+<!-- ============================================================== -->
+<div class="nombre-usuario m-r-20 hidden-sm-up box-top-right-custom">
+    <p>{{sesionService.usuario.nombre}}</p>
+    <p>{{sesionService.usuario.email}}</p>
+</div>
+<button [matMenuTriggerFor]="profile" mat-icon-button class="boton-perfil"> 
+    <div class="foto-perfil">
+        <img  [src]="fotoUsuarioBase64" alt="user" class="profile-pic crop">
+    </div> 
+</button>
+<button [matMenuTriggerFor]="profile" *ngIf='false' mat-icon-button class="m-r-5 icono-foto"> <img [src]="fotoUsuarioBase64" alt="user" class="profile-pic"> </button>
+<mat-menu #profile="matMenu" class="mymegamenu">
+    <button mat-menu-item *ngIf='false'>
+        <mat-icon>settings</mat-icon> Settings </button>
+    <button mat-menu-item *ngIf='false'>
+        <mat-icon>account_box</mat-icon> Profile </button>
+    <button mat-menu-item *ngIf='false'>
+        <mat-icon>notifications_off</mat-icon> Disable notifications </button>
+    <button mat-menu-item (click)="salir()">
+        <mat-icon>exit_to_app</mat-icon> Salir </button>
+</mat-menu>

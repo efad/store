@@ -1,0 +1,69 @@
+<div fxLayout="row">
+    <div fxFlex.gt-sm="100" fxFlex="100">
+        <mat-card>
+            <mat-card-content>
+                <mat-card-title>HULK STORE - Administración de Inventario</mat-card-title>
+                <mat-card-subtitle>Productos de DC-COMICS y MARVEL</mat-card-subtitle>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>
+
+<div fxLayout="row" style="margin: 15px;">
+    <div fxFlex.gt-sm="100" fxFlex="100">
+        <mat-card>
+            <mat-card-content>
+                <div class="button-row">
+                    <button mat-raised-button color="primary">Nuevo +</button>
+
+                    <a mat-raised-button routerLink=".">Link</a>
+                </div>
+
+                <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+
+
+                    <ng-container matColumnDef="id">
+                        <th mat-header-cell *matHeaderCellDef> No. </th>
+                        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="nombre">
+                        <th mat-header-cell *matHeaderCellDef> Nombre </th>
+                        <td mat-cell *matCellDef="let element"> {{element.nombre}} </td>
+                    </ng-container>
+
+
+                    <ng-container matColumnDef="descripcion">
+                        <th mat-header-cell *matHeaderCellDef> Descripción </th>
+                        <td mat-cell *matCellDef="let element"> {{element.descripcion}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="existencia">
+                        <th mat-header-cell *matHeaderCellDef> Existencias </th>
+                        <td mat-cell *matCellDef="let element"> {{element.existencia}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="valor">
+                        <th mat-header-cell *matHeaderCellDef> Valor </th>
+                        <td mat-cell *matCellDef="let element"> {{element.valor}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="estado">
+                        <th mat-header-cell *matHeaderCellDef> Acción </th>
+                        <td mat-cell *matCellDef="let element">
+                            <button mat-icon-button>
+                                <mat-icon aria-label="Example icon-button with a heart icon">edit</mat-icon>
+                            </button>
+                        </td>
+                    </ng-container>
+
+
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                </table>
+            </mat-card-content>
+        </mat-card>
+
+    </div>
+</div>
