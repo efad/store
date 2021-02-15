@@ -22,7 +22,7 @@ Desarrollada bajo el framework ANGULAR
 
 # 1. Carga de tablas de Base de Datos sobre Postgresql
 
-Importa scripts del archivo SQL llamado: /hulkstore-modelo/scripts/estructura-db.sql el cual contiene la estructura de tablas de la base de datos.
+Importar el script SQL ubicado en: /hulkstore-modelo/scripts/estructura-db.sql el cual contiene la estructura de tablas de la base de datos.
 
 # 2. Configuración del DataSource de Postgresql sobre el standalone.xml de WildFly ejemplo:
 
